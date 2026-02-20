@@ -14,7 +14,7 @@ export async function fetchCardData() {
       getAllCommentsApi(options),
       getAllUsersApi(options),
     ]);
-    const numberOfPost = Number(data[0].length ?? "0");
+    const numberOfPost = Number(data[0].posts.length ?? "0");
     const numberOfComments = Number(data[1].countComments ?? "0");
     const numberOfUsers = Number(data[2].users.length ?? "0");
     return {

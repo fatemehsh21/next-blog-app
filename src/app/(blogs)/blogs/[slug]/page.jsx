@@ -5,7 +5,7 @@ import RelatedPost from "../_components/RelatedPost";
 import PostComment from "../_components/comment/PostComment";
 
 export async function generateStaticParams() {
-  const posts = await getPosts();
+  const {posts} = await getPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
