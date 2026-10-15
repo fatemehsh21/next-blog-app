@@ -3,8 +3,8 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
+        protocol: "https",
+        hostname: "blog-app-backend-xzra.onrender.com",
         port: "5000",
         pathname: "/uploads/**",
       },
