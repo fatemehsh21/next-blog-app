@@ -5,8 +5,13 @@ import RelatedPost from "../_components/RelatedPost";
 import PostComment from "../_components/comment/PostComment";
 
 export async function generateStaticParams() {
-  const {posts} = await getPosts();
-  return posts.map((post) => ({ slug: post.slug }));
+  try {
+    const posts = await getPosts();
+    return (posts ?? []).map((p) => ({ slug: p.slug }));
+  } catch (e) {
+    console.error("generateStaticParams failed:", e.message);
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }) {
