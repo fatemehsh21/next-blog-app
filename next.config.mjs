@@ -5,7 +5,6 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "blog-app-backend-xzra.onrender.com",
-        port: "5000",
         pathname: "/uploads/**",
       },
     ],
