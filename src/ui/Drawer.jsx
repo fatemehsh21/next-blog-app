@@ -3,7 +3,7 @@
 import { createPortal } from "react-dom";
 
 function Drawer({ open, onClose, children }) {
-  return createPortal(
+  return  open && createPortal(
     <>
       <div
         className={`backdrop-blur-sm fixed inset-0 w-full h-screen bg-secondary-800 bg-opacity-30  ${
